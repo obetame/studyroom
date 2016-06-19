@@ -1,0 +1,190 @@
+#more{
+	top: -140px;
+	margin-bottom: -60px;
+}
+.sites{
+	width:100%;
+	box-sizing: border-box;
+	display: webkit-flex;
+	display:ms-flexbox;
+	display:flex;
+	-webkit-flex:0 1 auto;
+	-ms-flex:0 1 auto;
+	flex:0 1 auto;
+	-webkit-flex-direction:row;
+	-ms-flex-direction:row;
+	flex-direction:row;
+	-webkit-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.sites .site{
+	box-sizing:border-box;
+	display:webkit-flex;
+	display:ms-flex;
+	display:flex;
+	-webkit-flex:0 1 auto;
+	-ms-flex:0 1 auto;
+	flex:0 1 auto;
+	-webkit-flex-direction:column;
+	-ms-flex-direction:column;
+	flex-dircetion:column;
+	-web-flex-grow:1;
+	-ms-flex-position:1;
+	flex-grow:1;
+	-webkit-flex-shrink: 1;
+	-ms-flex-negative: 1;
+	flex-shrink: 1;
+	-webkit-flex-basis: 25%;
+	-ms-flex-preferred-size: 25%;
+	flex-basis: 25%;
+	max-width: 25%;
+	height: 80px;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+@media (max-width:980px){
+	.sites .site{
+		box-sizing:border-box;
+		display:webkit-flex;
+		display:ms-flex;
+		display:flex;
+		-webkit-flex:0 1 auto;
+		-ms-flex:0 1 auto;
+		flex:0 1 auto;
+		-webkit-flex-direction:column;
+		-ms-flex-direction:column;
+		flex-dircetion:column;
+		-web-flex-grow:1;
+		-ms-flex-position:1;
+		flex-grow:1;
+		-webkit-flex-shrink: 1;
+		-ms-flex-negative: 1;
+		flex-shrink: 1;
+		-webkit-flex-basis: 33.3333%;
+		-ms-flex-preferred-size: 33.3333%;
+		flex-basis: 33.3333%;
+		max-width: 33.3333%;
+		height: 80px;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	#more{
+		top: -80px;
+		margin-bottom: -60px;
+	}
+}
+@media (max-width:600px){
+	.sites .site{
+		box-sizing:border-box;
+		display:webkit-flex;
+		display:ms-flex;
+		display:flex;
+		-webkit-flex:0 1 auto;
+		-ms-flex:0 1 auto;
+		flex:0 1 auto;
+		-webkit-flex-direction:column;
+		-ms-flex-direction:column;
+		flex-dircetion:column;
+		-web-flex-grow:1;
+		-ms-flex-position:1;
+		flex-grow:1;
+		-webkit-flex-shrink: 1;
+		-ms-flex-negative: 1;
+		flex-shrink: 1;
+		-webkit-flex-basis: 50%;
+		-ms-flex-preferred-size: 50%;
+		flex-basis: 50%;
+		max-width: 50%;
+		height: 80px;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	#more{
+		top: -50px;
+		margin-bottom: -60px;
+	}
+}
+@media (max-width:450px){
+	.sites .site{
+		box-sizing:border-box;
+		display:webkit-flex;
+		display:ms-flex;
+		display:flex;
+		-webkit-flex:0 1 auto;
+		-ms-flex:0 1 auto;
+		flex:0 1 auto;
+		-webkit-flex-direction:column;
+		-ms-flex-direction:column;
+		flex-dircetion:column;
+		-web-flex-grow:1;
+		-ms-flex-position:1;
+		flex-grow:1;
+		-webkit-flex-shrink: 1;
+		-ms-flex-negative: 1;
+		flex-shrink: 1;
+		-webkit-flex-basis: 33.3333%;
+		-ms-flex-preferred-size: 33.3333%;
+		flex-basis: 33.3333%;
+		max-width: 33.3333%;
+		height: 80px;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.hide-mobile{
+		display: none;
+	}
+}
+.center{
+	text-align:center;
+}
+.gray-bg{
+	background-color: #E5E5E5;
+}
+.green-bg{
+	background: linear-gradient(to bottom, #2ec66b 0%,#2dc970 1%,#2ac96c 2%,#2bc76e 4%,#2bc869 5%,#2ac871 6%,#29c86c 7%,#28c76b 15%,#2bc76c 16%,#21bb61 73%,#1eb860 100%);
+}
+.red-bg{
+	background: #e97262;
+    background: linear-gradient(to bottom, #e97262 0%,#ef6865 1%,#ed6c5f 2%,#f07162 4%,#f17062 5%,#eb6f67 6%,#ec6c5f 7%,#ec6b5e 18%,#eb5d4f 56%,#e95242 100%);
+}
+.hover-black>i:hover{
+	color: #FCDD44;
+}
+.icon-custom{
+	width: 60px;
+    height: 80px;
+    font-size: 1.4em;
+
+}
+.site-width{
+	width:90%;
+	text-align: center;
+}
+.icon-size{
+	font-size: 1.4em;
+	padding:0;
+	margin:0;
+}
+.page{
+	margin-top:20px;
+}
+.submit-position{
+	margin-top: 40px;	
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>注册-静习苑</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/other.css" rel='stylesheet' type='text/css' />
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="js/jquery-2.2.1.min.js"></script>
+<!----webfonts--->
+<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<!---//webfonts--->  
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+	.form-control1{
+		height: 100%;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+	}
+	label{
+		color:#fff;
+	}
+	input{
+		 color:#fff !important;
+	}
+</style>
+</head>
+<body id="login">
+	<div class="login-logo">
+		<h2>欢迎注册自习室</h2>
+	</div>
+	<h2 class="form-heading">注册享受更多服务</h2>
+	<form class="form-signin app-cam" action="./register">
+			<p style="color:#fff">输入你的信息(<b>必须</b>)：</p>
+			<input type="text" id="realName" name="realName" class="form-control1" placeholder="您的姓名..." autofocus="true" autocomplete="off">
+			<input type="text" id="userID" name="userID" class="form-control1" placeholder="学生号..." autocomplete="off">
+			<input type="text" id="college" name="college"  class="form-control1" placeholder="你的学院..." autocomplete="off">
+			<input type="text" id="profession" name=" profession"  class="form-control1" placeholder="你的专业..." autocomplete="off">
+			<input type="text"  id="grade" name="grade" class="form-control1" placeholder="你的年级..." autocomplete="off">
+			<div class="radios">
+				<label for="radio-01" class="label_radio" style="color: rgb(194, 186, 186);">
+						<input type="radio" name="gender" value="1"  checked="true"> 男
+				</label>
+				<label for="radio-02" class="label_radio" style="color: rgb(194, 186, 186);">
+						<input type="radio" name="gender"   value="0" > 女
+				</label>
+		</div>
+		<p style="color:#fff">输入的其它信息：</p>
+			<input type="text" id="email" name="email"  class="form-control1" placeholder="您的邮箱..." autocomplete="off">
+			<input type="password" id="password" name="password"  class="form-control1" placeholder="请输入您的密码..." autocomplete="off">
+			<input type="password" id="re-password" name="re-password"  class="form-control1" placeholder="重复密码..." autocomplete="off">
+			<label class="checkbox-custom check-success">
+					<input type="checkbox" value="我同意使用此服务和隐私条例" id="checkbox1" autocomplete="off"> <label for="checkbox1" style="color: #000;">我同意使用此服务和隐私条例</label>
+			</label>
+			<button class="btn btn-lg btn-success1 btn-block" type="submit">提交注册</button>
+			<div class="registration" style="color: rgb(194, 186, 186);">
+					已经注册.
+					<a class="" href="./login">
+							登陆
+					</a>
+			</div>
+	</form>
+	 <div class="copy_layout login register">
+			<div class="container">
+				<p style="color:#fff;">静习苑 提供的内容仅用于测试。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。且所有内容仅供测试，对任何法律问题及风险不承担任何责任。当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。</p>
+			</div>
+	 </div>
+</body>
+</html>

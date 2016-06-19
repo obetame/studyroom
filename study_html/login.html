@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>登陆-静习苑</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="自习室,登陆" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="css/other.css" rel='stylesheet' type='text/css' />
+<!-- jQuery -->
+<script src="js/jquery-2.2.1.min.js"></script>
+<!----webfonts--->
+<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<!---//webfonts--->  
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body id="login">
+  <div class="login-logo">
+    <h2>欢迎登陆自习室</h2>
+  </div>
+  <h2 class="form-heading">立即登陆</h2>
+  <div class="app-cam">
+	  <form action='./login' method="post">
+		<input type="text" id="userID" name="userID" class="text" value="账号/邮箱..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '学生号...';}">
+		<input type="password" id="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+		<div class="submit"><input type="submit" value="登陆"></div>
+		<div class="login-social-link">
+          <a href="##" class="facebook">
+              Q Q
+          </a>
+          <a href="##" class="twitter">
+              微博
+          </a>
+        </div>
+		<ul class="new">
+			<li class="new_left"><p><a href="##" style="color:#fff;">忘记密码 ?</a></p></li>
+			<li class="new_right"><p class="sign" style="color:#fff;">创建账号 ?<a style="color:#fff;" href="./register"> 注册</a></p></li>
+			<div class="clearfix"></div>
+		</ul>
+	</form>
+  </div>
+   <div class="copy_layout login">
+      <div class="container">
+        <p style="color:#fff;">静习苑 提供的内容仅用于测试。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。且所有内容仅供测试，对任何法律问题及风险不承担任何责任。当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。</p>
+      </div>
+   </div>
+</body>
+</html>

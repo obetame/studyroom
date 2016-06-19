@@ -1,0 +1,212 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		| &#x9;
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		| &#x9;
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		| &#x9;
+		title &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;-&#x9759;&#x4E60;&#x82D1;
+		//
+			Holiday Template
+			http://www.templatemo.com/tm-475-holiday
+		link(href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,600,700', rel='stylesheet', type='text/css')
+		| &#x9;
+		link(href='css/font-awesome.min.css', rel='stylesheet')
+		| &#x9;
+		link(href='css/bootstrap.min.css', rel='stylesheet')
+		| &#x9;
+		link(href='css/bootstrap-datetimepicker.min.css', rel='stylesheet')
+		link(rel='stylesheet', type='text/css', href='css/messenger-theme-flat.css')
+		link(rel='stylesheet', type='text/css', href='css/messenger.css')
+		link(href='css/flexslider.css', rel='stylesheet')
+		| &#x9;
+		link(href='css/templatemo-style.css', rel='stylesheet')
+		// HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+		// WARNING: Respond.js doesn't work if you view the page via file://
+		//if lt IE 9
+			script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+			| &#x9;&#x9;
+			script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+	| &#x9;
+	body.tm-gray-bg
+		// Header
+		.tm-header
+			.container
+				.row
+					.col-lg-5.col-md-4.col-sm-3.tm-site-name-container
+						a.tm-site-name(href='#') &#x9759;&#x4E60;&#x82D1;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						span.hidden-xs.hidden-sm &mdash;&mdash;&#x5B89;&#x9759;&#x3001;&#x7F8E;&#x4E3D;&#x3001;&#x8212;&#x9002;
+					| &#x9;&#x9;&#x9;&#x9;
+					.col-lg-7.col-md-8.col-sm-9
+						.mobile-menu-icon
+							i.fa.fa-bars
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						nav.tm-nav
+							ul
+								li
+									a(href='./') &#x9996; &#x9875;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='./select') &#x9009; &#x5EA7;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a.active(href='./usercenter') &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='./about') &#x5173; &#x4E8E;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							if isUser
+								ul.nav.navbar-nav(style='margin-top:40px;')
+									a(href='##')
+										span.badge
+											i.fa.fa-user #{realName}
+							else
+								form.navbar-form.navbar-right.hidden-xs.hidden-sm(action='##', style='margin-top:30px;')
+									a.btn.btn-success(href='./register') &#x6CE8;&#x518C;
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									a.btn.btn-default(href='./login') &#x767B;&#x5F55;
+		// white bg
+		section.tm-white-bg.section-padding-bottom
+			.container
+				.row
+					.tm-section-header(style='margin-top:20px;')
+						.col-lg-4.col-md-3.col-sm-3
+							hr
+						.col-lg-4.col-md-6.col-sm-6
+							h2.tm-section-title 个人中心
+						.col-lg-4.col-md-3.col-sm-3
+							hr
+				.row
+					// Testimonial
+					.col-lg-12
+						.tm-what-we-do-right
+							.tm-about-box-2.margin-bottom-30
+								h3.tm-about-box-2-title 我的座位信息
+								p(style='color: rgb(154, 152, 152);margin-bottom: 20px;') 请注意：未及时续时的座位会被清退，且增加记录超时次数一次，所以请离座并且不再回来的同学记得退座，以免伤及信用。
+								.tm-about-box-2.pull-right(style='margin-bottom: 20px;')
+									button.btn.btn-info(type='button',id="outPosition") 退座
+									button.btn.btn-info(type='button',id="addTime") 续时
+								table.table.table-striped.table-hover
+									thead
+										tr
+											th 自习室
+											th 位置
+											th 坐下时间
+											th 离座时间
+											th 操作 
+									tbody
+										if Boolean(siteIsArray)
+											- for(var i =0;i<sites.length;i++){
+													tr
+														td #{sites[i].roomNumber}
+														td #{sites[i].siteNumber}
+														td #{sites[i].moment}
+														if sites[i].hidden
+															td(style="color:green") 未离座
+															td
+																input(type="radio",name="operation",data-roomNumber="#{sites[i].roomNumber}",data-siteNumber="#{sites[i].siteNumber}",data-outPosition="no")
+														else
+															td(style="color:red") 已离座
+															td
+																input(type="radio",name="operation",data-roomNumber="#{sites[i].roomNumber}",data-siteNumber="#{sites[i].siteNumber}",data-outPosition="yes")
+											- }
+										else
+											tr
+												td #{sites.roomNumber}
+												td #{sites.siteNumber}
+												td #{sites.moment}
+												if sites.hidden
+													td(style="color:green") 未离座
+													td
+														input(type="radio",name="operation",data-roomNumber="#{sites[i].roomNumber}",data-siteNumber="#{sites[i].siteNumber}",data-outPosition="no")
+												else
+													td(style="color:red") 已离座
+													td
+														input(type="radio",name="operation",data-roomNumber="#{sites[i].roomNumber}",data-siteNumber="#{sites[i].siteNumber}",data-outPosition="yes")
+										//- tr
+										//- 	td A
+										//- 	td 07
+										//- 	td 2016年4月5号下午14时23分
+										//- 	td 未离座
+										//- 	td
+										//- 		input(type='radio', name='operation', value='A07', disabled='disabled')
+							//- .tm-about-box-2(style='clear:both;')
+							//- 	.page(style='text-align:center;')
+							//- 		ul.pagination.pagination
+							//- 			- var pageNubmer = Math.ceil(sum/8)
+							//- 			- for(var i = 1;i<=pageNubmer;i++){
+							//- 					if i==nowpage
+							//- 						li.active
+							//- 							a(href='./usercenter?page=#{i}') #{i}
+							//- 					else
+							//- 						li
+							//- 							a(href='./usercenter?page=#{i}') #{i}
+							//- 			- }
+						.tm-testimonials-box
+							h3.tm-testimonials-title &#x4E2A;&#x4EBA;&#x4FE1;&#x606F;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							div(style='margin-left: 15px;margin-right: 15px;')
+								.tm-testimonial
+									strong.text-uppercase
+										| &#x59D3;&#x540D;:
+										span #{user.realName}
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									br
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									strong.text-uppercase
+										| &#x5B66;&#x53F7;:
+										span #{user.userID}
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									br
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									strong.text-uppercase
+										| &#x5E74;&#x7EA7;:
+										span #{user.grade}
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									br
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									strong.text-uppercase
+										| &#x5B66;&#x9662;:
+										span #{user.college}
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									br
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									strong.text-uppercase
+										| &#x4E13;&#x4E1A;:
+										span #{user.profession}
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								.tm-testimonial
+									strong.text-uppercase
+										| &#x8D85;&#x65F6;&#x6B21;&#x6570;:
+										span #{user.overTimeNumber}
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									p &#x8D85;&#x65F6;&#x6B21;&#x6570;&#x8D8A;&#x591A;&#x8BF4;&#x660E;&#x4F60;&#x8D8A;&#x4E0D;&#x5B88;&#x4FE1;&#x3002;
+								|  
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								.tm-testimonial
+									strong.text-uppercase
+										| &#x559C;&#x6B22;&#x4EBA;&#x6570;:
+										span #{user.like}
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									p &#x559C;&#x6B22;&#x4EBA;&#x6570;&#x91CF;&#x8D8A;&#x591A;&#x4EE3;&#x8868;&#x4F60;&#x8D8A;&#x53D7;&#x6B22;&#x8FCE;&#x3002;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								.tm-testimonial
+									strong.text-uppercase
+										| &#x4E0D;&#x559C;&#x6B22;&#x4EBA;&#x6570;:
+										span #{user.nolike}
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									p &#x5982;&#x679C;&#x6570;&#x91CF;&#x5F88;&#x591A;&#x4F60;&#x5F97;&#x597D;&#x597D;&#x53CD;&#x601D;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x8FD9;&#x6837;&#x54AF;!
+		| &#x9;
+		footer.tm-black-bg
+			.container
+				.row
+					p.tm-copyright-text
+						| &#x9759;&#x4E60;&#x82D1; &#x63D0;&#x4F9B;&#x7684;&#x5185;&#x5BB9;&#x4EC5;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x3002;&#x6211;&#x4EEC;&#x4E0D;&#x4FDD;&#x8BC1;&#x5185;&#x5BB9;&#x7684;&#x6B63;&#x786E;&#x6027;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x672C;&#x7AD9;&#x5185;&#x5BB9;&#x968F;&#x4E4B;&#x800C;&#x6765;&#x7684;&#x98CE;&#x9669;&#x4E0E;&#x672C;&#x7AD9;&#x65E0;&#x5173;&#x3002;&#x4E14;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x4EC5;&#x4F9B;&#x6D4B;&#x8BD5;&#xFF0C;&#x5BF9;&#x4EFB;&#x4F55;&#x6CD5;&#x5F8B;&#x95EE;&#x9898;&#x53CA;&#x98CE;&#x9669;&#x4E0D;&#x627F;&#x62C5;&#x4EFB;&#x4F55;&#x8D23;&#x4EFB;&#x3002;&#x5F53;&#x4F7F;&#x7528;&#x672C;&#x7AD9;&#x65F6;&#xFF0C;&#x4EE3;&#x8868;&#x60A8;&#x5DF2;&#x63A5;&#x53D7;&#x4E86;&#x672C;&#x7AD9;&#x7684;&#x4F7F;&#x7528;&#x6761;&#x6B3E;&#x548C;&#x9690;&#x79C1;&#x6761;&#x6B3E;&#x3002;&#x7248;&#x6743;&#x6240;&#x6709;&#xFF0C;&#x4FDD;&#x7559;&#x4E00;&#x5207;&#x6743;&#x5229;&#x3002;
+		script(type='text/javascript', src='js/jquery-1.11.2.min.js')
+		script(type='text/javascript', src='js/bootstrap.min.js')
+		script(type='text/javascript', src='js/messenger.min.js')
+		script(type='text/javascript', src='js/messenger-theme-flat.js')
+		script(type='text/javascript', src='js/usercenter.js')

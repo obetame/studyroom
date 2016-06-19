@@ -1,0 +1,7 @@
+#ignore packages installed by npm
+node_modules
+
+#put any other file you don't watn to check in here,
+#such as .Ds_Store ,*.bak,etc
+
+#credentials.js is my private file

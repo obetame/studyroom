@@ -1,0 +1,239 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		| &#x9;
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		| &#x9;
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		| &#x9;
+		meta(name='keywords', content='自习室,自习室选座,选座,大学')
+		| &#x9;
+		title &#x9009;&#x5EA7;-&#x9759;&#x4E60;&#x82D1;
+		// <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+		link(href='css/font-awesome.min.css', rel='stylesheet')
+		| &#x9;
+		link(href='css/bootstrap.min.css', rel='stylesheet')
+		// <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		link(href='css/flexslider.css', rel='stylesheet')
+		| &#x9;
+		link(href='css/templatemo-style.css', rel='stylesheet')
+		| &#x9;
+		link(rel='stylesheet', type='text/css', href='css/messenger-theme-flat.css')
+		link(rel='stylesheet', type='text/css', href='css/messenger.css')
+		| &#x9;
+		link(rel='stylesheet', type='text/css', href='css/select.css')
+		// HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+		// WARNING: Respond.js doesn't work if you view the page via file://
+		//if lt IE 9
+			script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+			| &#x9;
+			script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+	body
+		// Header
+		.tm-header
+			.container
+				.row
+					.col-lg-5.col-md-4.col-sm-3.tm-site-name-container
+						a.tm-site-name(href='#') &#x9759;&#x4E60;&#x82D1;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						span.hidden-xs.hidden-sm &mdash;&mdash;&#x5B89;&#x9759;&#x3001;&#x7F8E;&#x4E3D;&#x3001;&#x8212;&#x9002;
+					| &#x9;&#x9;&#x9;&#x9;
+					.col-lg-7.col-md-8.col-sm-9
+						.mobile-menu-icon
+							i.fa.fa-bars
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						nav.tm-nav
+							ul
+								li
+									a(href='./') &#x9996; &#x9875;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a.active(href='./select') &#x9009; &#x5EA7;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='./usercenter') &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='./about') &#x5173; &#x4E8E;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							if isUser
+								ul.nav.navbar-nav(style='margin-top:40px;')
+									a(href='##')
+										span.badge
+											i.fa.fa-user #{realName}
+							else
+								form.navbar-form.navbar-right.hidden-xs.hidden-sm(action='##', style='margin-top:30px;')
+									a.btn.btn-success(href='./register') &#x6CE8;&#x518C;
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									a.btn.btn-default(href='./login') &#x767B;&#x5F55;
+		// Banner
+		section.tm-banner
+			// Flexslider
+			.flexslider.flexslider-banner
+				ul.slides
+					li
+						.tm-banner-inner
+							h1.tm-banner-title
+								| &#x6B22;&#x8FCE;&#x6765;&#x5230; 
+								span.tm-yellow-text &#x9759;&#x4E60;&#x82D1;
+								|  &#x9009;&#x5EA7;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;
+							p.tm-banner-subtitle &#x4E2A;&#x6027;&#x5316;&#x5B9A;&#x5236;&#x4F60;&#x7684;&#x81EA;&#x4E60;&#x5BA4;
+						| &#x9;&#x9;&#x9;&#x9;
+						img(src='img/study2.jpg', alt='选座图片2')
+		// gray bg
+		section#more.container.tm-home-section-1
+			.row
+				// slider
+				.flexslider.effect2.effect2-contact.tm-contact-box-1(style='padding-bottom: 10px;')
+					ul.slides
+						li
+							div
+								canvas#pie(height='300', width='400', style='width: 400px; height: 300px;float:left;')
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							.contact-text
+								h2.slider-title &#x52A8;&#x6001;&#x66F4;&#x65B0;&#x81EA;&#x4E60;&#x5BA4;&#x60C5;&#x51B5;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								h3.slider-subtitle &#x968F;&#x65F6;&#x67E5;&#x770B;&#x81EA;&#x4E60;&#x5BA4;&#x5E74;&#x7EA7;&#x5206;&#x5E03;&#x72B6;&#x6001;&#xFF0C;&#x66F4;&#x597D;&#x7684;&#x5B89;&#x6392;&#x81EA;&#x4E60;&#x65F6;&#x95F4;&#x907F;&#x5F00;&#x9AD8;&#x5CF0;&#x671F;&#x3002;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								p.slider-description
+									| &#x672C;&#x6570;&#x636E;&#x57FA;&#x4E8E;&#x4F7F;&#x7528;&#x8005;&#x4F7F;&#x7528;&#x65F6;&#x8FFD;&#x8E2A;&#x4EA7;&#x751F;&#xFF0C;&#x5E76;&#x4E0D;&#x5C5E;&#x4E8E;&#x9690;&#x79C1;&#x6570;&#x636E;&#xFF0C;&#x82E5;&#x4F60;&#x5BF9;&#x672C;&#x6570;&#x636E;&#x7684;&#x4F7F;&#x7528;&#x548C;&#x6765;&#x6E90;&#x6709;&#x6000;&#x7591;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x4EEC;&#x3002; 
+									br
+									br
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x6211;&#x4EEC;&#x5C06;&#x968F;&#x540E;&#x63A8;&#x51FA;&#x66F4;&#x591A;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x8BA9;&#x4F60;&#x8FFD;&#x8E2A;&#x81EA;&#x4E60;&#x5BA4;&#x60C5;&#x51B5;&#x5E76;&#x63D0;&#x4F9B;&#x6700;&#x597D;&#x7684;&#x5EFA;&#x8BAE;&#x3002;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								.slider-social
+									a.tm-social-icon(href='##')
+										| &#x66F4;&#x591A;&#x4ECB;&#x7ECD; 
+										i.fa.fa-angle-double-right
+		// white bg
+		section.section-padding-bottom
+			.container
+				.row
+					.tm-section-header
+						.col-lg-4.col-md-3.col-sm-3
+							hr
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						.col-lg-4.col-md-6.col-sm-6
+							h2.tm-section-title &#x81EA;&#x4E60;&#x5BA4;&#x9009;&#x5EA7;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						.col-lg-4.col-md-3.col-sm-3
+							hr
+				| &#x9;&#x9;&#x9;
+				.row
+					.page.center
+						ul.pagination.pagination
+							each letter in ['A','B','C','D','E','F']
+								if letter == roomNumber
+									li.active
+										a(href='./select?roomNumber=#{letter}') 自习室#{letter}
+								else	
+									li
+										a(href='./select?roomNumber=#{letter}') 自习室#{letter}
+				.row
+					// 选座
+					.sites
+						mixin Site(roomNumber,sites)
+							//-如果没有已经占座的数据
+							if !sites
+								- for(var j=1;j<=20;j++){
+									.site
+										.site-width.gray-bg
+											a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
+												span 收藏
+												i.fa.fa-star-o.tm-home-box-2-icon
+											a.tm-home-box-2-link.border-right.border-left(href='##')
+												span.tm-home-box-2-icon
+													b #{j}
+											a.js_a_check(href='##')
+												i.fa.fa-square-o.icon-size(data-select='#{roomNumber}#{j}')
+								- }
+							else
+								if typeof sites == 'object'
+									- var isHidden=0
+									- var record = 0
+									- for(var j=1;j<=20;j++){
+										- isHidden=0
+										- for(var i=0;i<sites.length;i++){
+												if j==sites[i].siteNumber
+													- isHidden=1+isHidden
+													- record=i
+												else
+													- isHidden=0+isHidden
+										- }
+										if isHidden != 0
+											.site
+												.site-width.red-bg
+													a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{record}')
+														span 收藏
+														i.fa.fa-star-o.tm-home-box-2-icon
+													a.tm-home-box-2-link.border-right.border-left(href='##')
+														span.tm-home-box-2-icon
+															b #{j}
+													i.fa.fa-ban.icon-size
+										else
+											.site
+												.site-width.gray-bg
+													a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
+														span 收藏
+														i.fa.fa-star-o.tm-home-box-2-icon
+													a.tm-home-box-2-link.border-right.border-left(href='##')
+														span.tm-home-box-2-icon
+															b #{j}
+													a.js_a_check(href='##')
+														i.fa.fa-square-o.icon-size(data-select='#{roomNumber}#{j}')
+									- }
+								else
+									- for(var j=1;j<=20;j++){
+											if j==sites.siteNumber
+												.site
+													.site-width.red-bg
+														a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
+															span 收藏
+															i.fa.fa-star-o.tm-home-box-2-icon
+														a.tm-home-box-2-link.border-right.border-left(href='##')
+															span.tm-home-box-2-icon
+																b #{j}
+														i.fa.fa-ban.icon-size
+											else
+												.site
+													.site-width.gray-bg
+														a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
+															span 收藏
+															i.fa.fa-star-o.tm-home-box-2-icon
+														a.tm-home-box-2-link.border-right.border-left(href='##')
+															span.tm-home-box-2-icon
+																b #{j}
+														a.js_a_check(href='##')
+															i.fa.fa-square-o.icon-size(data-select='#{roomNumber}#{j}')
+									- }
+						+Site(roomNumber,sites)
+					.row
+						.col-md-4.col-sm-4.col-xs-3
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						.col-md-4.col-sm-4.col-xs-6
+							button.submit-position.btn.btn-success.btn-block &#x9009;&#x597D;&#x4E86;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						.col-md-4.col-sm-4.col-xs-3
+		| &#x9;
+		footer.tm-black-bg
+			.container
+				.row
+					p.tm-copyright-text
+						| &#x9759;&#x4E60;&#x82D1; &#x63D0;&#x4F9B;&#x7684;&#x5185;&#x5BB9;&#x4EC5;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x3002;&#x6211;&#x4EEC;&#x4E0D;&#x4FDD;&#x8BC1;&#x5185;&#x5BB9;&#x7684;&#x6B63;&#x786E;&#x6027;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x672C;&#x7AD9;&#x5185;&#x5BB9;&#x968F;&#x4E4B;&#x800C;&#x6765;&#x7684;&#x98CE;&#x9669;&#x4E0E;&#x672C;&#x7AD9;&#x65E0;&#x5173;&#x3002;&#x4E14;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x4EC5;&#x4F9B;&#x6D4B;&#x8BD5;&#xFF0C;&#x5BF9;&#x4EFB;&#x4F55;&#x6CD5;&#x5F8B;&#x95EE;&#x9898;&#x53CA;&#x98CE;&#x9669;&#x4E0D;&#x627F;&#x62C5;&#x4EFB;&#x4F55;&#x8D23;&#x4EFB;&#x3002;&#x5F53;&#x4F7F;&#x7528;&#x672C;&#x7AD9;&#x65F6;&#xFF0C;&#x4EE3;&#x8868;&#x60A8;&#x5DF2;&#x63A5;&#x53D7;&#x4E86;&#x672C;&#x7AD9;&#x7684;&#x4F7F;&#x7528;&#x6761;&#x6B3E;&#x548C;&#x9690;&#x79C1;&#x6761;&#x6B3E;&#x3002;&#x7248;&#x6743;&#x6240;&#x6709;&#xFF0C;&#x4FDD;&#x7559;&#x4E00;&#x5207;&#x6743;&#x5229;&#x3002;
+		| &#x9;
+		script(type='text/javascript', src='js/jquery-1.11.2.min.js')
+		// jQuery
+		script(type='text/javascript', src='js/bootstrap.min.js')
+		// bootstrap js
+		script(type='text/javascript', src='js/jquery.flexslider-min.js')
+		// flexslider js
+		script(type='text/javascript', src='js/templatemo-script.js')
+		// Templatemo Script
+		script(src='js/Chart.min.js')
+		| &#x9;
+		script(type='text/javascript', src='js/messenger.min.js')
+		script(type='text/javascript', src='js/messenger-theme-flat.js')
+		| &#x9;
+		script(type='text/javascript', src='js/select.js')
