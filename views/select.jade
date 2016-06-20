@@ -23,6 +23,7 @@ html(lang='en')
 		link(rel='stylesheet', type='text/css', href='css/messenger.css')
 		| &#x9;
 		link(rel='stylesheet', type='text/css', href='css/select.css')
+		link(rel="stylesheet", href="css/sweetalert.css")
 		// HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
 		// WARNING: Respond.js doesn't work if you view the page via file://
 		//if lt IE 9
@@ -143,7 +144,7 @@ html(lang='en')
 											a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
 												span 收藏
 												i.fa.fa-star-o.tm-home-box-2-icon
-											a.tm-home-box-2-link.border-right.border-left(href='##')
+											a.position_message.tm-home-box-2-link.border-right.border-left(href='##')
 												span.tm-home-box-2-icon
 													b #{j}
 											a.js_a_check(href='##')
@@ -168,7 +169,7 @@ html(lang='en')
 													a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{record}')
 														span 收藏
 														i.fa.fa-star-o.tm-home-box-2-icon
-													a.tm-home-box-2-link.border-right.border-left(href='##')
+													a.position_message.tm-home-box-2-link.border-right.border-left(href='##')
 														span.tm-home-box-2-icon
 															b #{j}
 													i.fa.fa-ban.icon-size
@@ -178,7 +179,7 @@ html(lang='en')
 													a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
 														span 收藏
 														i.fa.fa-star-o.tm-home-box-2-icon
-													a.tm-home-box-2-link.border-right.border-left(href='##')
+													a.position_message.tm-home-box-2-link.border-right.border-left(href='##')
 														span.tm-home-box-2-icon
 															b #{j}
 													a.js_a_check(href='##')
@@ -192,7 +193,7 @@ html(lang='en')
 														a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
 															span 收藏
 															i.fa.fa-star-o.tm-home-box-2-icon
-														a.tm-home-box-2-link.border-right.border-left(href='##')
+														a.position_message.tm-home-box-2-link.border-right.border-left(href='##')
 															span.tm-home-box-2-icon
 																b #{j}
 														i.fa.fa-ban.icon-size
@@ -202,7 +203,7 @@ html(lang='en')
 														a.js-position-collect.tm-home-box-2-link.hide-mobile(href='##', alt='收藏位置', data-select='#{roomNumber}#{j}')
 															span 收藏
 															i.fa.fa-star-o.tm-home-box-2-icon
-														a.tm-home-box-2-link.border-right.border-left(href='##')
+														a.position_message.tm-home-box-2-link.border-right.border-left(href='##')
 															span.tm-home-box-2-icon
 																b #{j}
 														a.js_a_check(href='##')
@@ -216,7 +217,38 @@ html(lang='en')
 							button.submit-position.btn.btn-success.btn-block &#x9009;&#x597D;&#x4E86;
 						| &#x9;&#x9;&#x9;&#x9;&#x9;
 						.col-md-4.col-sm-4.col-xs-3
-		| &#x9;
+		#mymodal.modal
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button.close(type='button', data-dismiss='modal')
+							span(aria-hidden='true') ×
+							span.sr-only 关闭
+						h4.modal-title 位置信息
+					.modal-body
+						.row
+							.col-md-4.col-md-offset-2
+								label(id="label_roomNumber") 自习室号:
+							.col-md-4
+								span(id="roomNumber") A
+						.row
+							.col-md-4.col-md-offset-2
+								label(id="label_siteNumber") 位置号:
+							.col-md-4
+								span(id="siteNumber") 8
+						.row
+							.col-md-4.col-md-offset-2
+								label(id="label_state") 位置状态:
+							.col-md-4
+								span(id="state") 未坐
+						.row
+							.col-md-4.col-md-offset-2
+								label(id="label_state") 座位人信息:
+							.col-md-4
+								span(id="state") 不可见
+					.modal-footer
+						button.btn.btn-danger(type='button', data-dismiss='modal',style="float:left") 投诉他
+						button.btn.btn-primary(type='button',data-dismiss='modal',) 确认
 		footer.tm-black-bg
 			.container
 				.row
@@ -231,6 +263,7 @@ html(lang='en')
 		// flexslider js
 		script(type='text/javascript', src='js/templatemo-script.js')
 		// Templatemo Script
+		srript(src="js/sweetalert.min.js")
 		script(src='js/Chart.min.js')
 		| &#x9;
 		script(type='text/javascript', src='js/messenger.min.js')
